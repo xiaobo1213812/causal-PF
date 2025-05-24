@@ -130,3 +130,6 @@ This repository contains a summary overview of this paper, as well as
 |Environmental factors → Signal Quality Assessment System|Scenario Constraints|When the environmental factors in the extreme weather, environmental factors lead to signal quality assessment distortion.|
 |Environmental factors → Redundancy and Switching Logic System|Scenario Constraints|When the environmental factors in extreme weather, environmental factors lead to redundancy system crash.|
 |Environmental factors → Flight controller|Imply|Environmental factor strong wind interference leads to data processing error, which leads to flight controller attitude control overrun.|
+
+
+### 🗞 The ‘json’ code for the problem diagram.
