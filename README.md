@@ -29,6 +29,69 @@ This repository contains a summary overview of this paper, as well as
 
 ### 📊The table of the basic causal graphs details of the GPS system.
 
+|ID| **Causality**               |
+|-------------------------|-----------------------|
+|1| Antenna → GPS System |
+| 2|Antenna → Signal Quality Assessment System |
+|3|Antenna → Data Parsing System  | 
+|4 |Signal Cable → GPS System |
+| 5|Signal Cable → Signal Quality Assessment System  | 
+| 6|Signal Cable → Data Parsing System | 
+|7|Power → GPS System |
+|8|Power → Clock Synchronization System    |
+|9|Power → Flight controller |
+|10|Power → Accelerometer | 
+|11|Power → Gyro|
+|12|Power → Data Parsing System|
+|13|Power → Redundancy and Switching Logic System |
+|14|Power → Driver|                                      |
+|15|Shielding Measures → GPS System |
+|16| Shielding Measures → Signal Quality Assessment System |
+|17|Accelerometer → Flight controller|
+|18|Gyro → Flight controller|
+|19|Driver → Data Parsing System|
+|20|Driver → Flight controller|
+|21|Driver → Redundancy and Switching Logic System|
+|22|Data Parsing System → Flight controller|
+|23|Clock Synchronization System → Flight controller|
+|24|Signal Quality Assessment System → Redundancy and Switching Logic System|
+|25|Signal Quality Assessment System → Flight controller|
+|26|Redundancy and Switching Logic System → Flight controller|
+|27|Flight controller → Visual and Laser Ranging System|
+|28|Visual and Laser Ranging System → Flight controller|
+|29|Human factors → Driver|
+|30|Human factors → Data Parsing System|
+|31|Human factors → Redundancy and Switching Logic System|
+|32|Human factors → Flight controller|
+|33|Environmental factors → GPS System|
+|34|Environmental factors → Signal Quality Assessment System|
+|35|Environmental factors → Redundancy and Switching Logic System|
+|36|Environmental factors → Flight controller|
+
+### 🗞The table between causal graph Variables and problem diagram domain in GPS system.
+
+| **causal graph Variables**               | **problem diagram domain**       |
+|-------------------------|-----------------------|
+| GPS System|Machine Domain|
+|Data Parsing System |Designed Domain| 
+|Signal Quality Assessment System  |Designed Domain|
+|Shielding Measures | Designed Domain| 
+|Clock Synchronization System|Designed Domain|
+|Redundancy and Switching Logic System|Designed Domain|
+|Driver|Designed Domain|
+|Visual and Laser Ranging System|Designed Domain|
+|Flight controller|Designed Domain|
+|Signal Cable|Given Domain(X)|
+|Antenna|Given Domain(X)|
+|Gyro|Given Domain(X)|
+|Accelerometer|Given Domain(X)|
+|Power|Given Domain(C)|
+|Environmental factors|Given Domain(C)|
+|Human factors|Given Domain(B)|
+
+
+### 📊 The table between causal graph relationship and problem diagram shared phenomena in GPS system.
+
 | **Causality**               | **Shared phenomena**       | **Description**                                                                 |
 |-------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------|
 | Antenna → GPS System | Cause | Antenna damage directly cause GPS cannot resolve data.|
@@ -67,24 +130,3 @@ This repository contains a summary overview of this paper, as well as
 |Environmental factors → Signal Quality Assessment System|Scenario Constraints|When the environmental factors in the extreme weather, environmental factors lead to signal quality assessment distortion.|
 |Environmental factors → Redundancy and Switching Logic System|Scenario Constraints|When the environmental factors in extreme weather, environmental factors lead to redundancy system crash.|
 |Environmental factors → Flight controller|Imply|Environmental factor strong wind interference leads to data processing error, which leads to flight controller attitude control overrun.|
-
-### 🗞The table between causal graph Variables and problem diagram domain in GPS system.
-
-| **causal graph Variables**               | **problem diagram domain**       |
-|-------------------------|-----------------------|
-| GPS System|Machine Domain|
-|Data Parsing System |Designed Domain| 
-|Signal Quality Assessment System  |Designed Domain|
-|Shielding Measures | Designed Domain| 
-|Clock Synchronization System|Designed Domain|
-|Redundancy and Switching Logic System|Designed Domain|
-|Driver|Designed Domain|
-|Visual and Laser Ranging System|Designed Domain|
-|Flight controller|Designed Domain|
-|Signal Cable|Given Domain(X)|
-|Antenna|Given Domain(X)|
-|Gyro|Given Domain(X)|
-|Accelerometer|Given Domain(X)|
-|Power|Given Domain(C)|
-|Environmental factors|Given Domain(C)|
-|Human factors|Given Domain(B)|
