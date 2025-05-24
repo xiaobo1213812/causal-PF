@@ -71,7 +71,7 @@ This repository contains a summary overview of this paper, as well as
 ### 🗞The table between causal graph Variables and problem diagram domain in GPS system.
 
 | **causal graph Variables**               | **problem diagram domain**       |
-|-------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------|
+|-------------------------|-----------------------|
 | GPS System|Machine Domain|
 |Data Parsing System |Designed Domain| 
 |Signal Quality Assessment System  |Designed Domain|
