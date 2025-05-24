@@ -47,3 +47,23 @@ This repository contains a summary overview of this paper, as well as
 |Power → Driver|Trigger| Unstable power supply immediately triggers to driver failure.                                       |
 |Shielding Measures → GPS System |Scenario Constraints|When shielding is poor, it leads to the system to misjudge signal blindness; When shielding is excessive, it leads to failure to receive signals.     |
 | Shielding Measures → Signal Quality Assessment System |Scenario Constraints|When poorly masked, it leads to parsing the wrong coordinates; When over-masked, it leads to receiving the coordinates.        |
+|Accelerometer → Flight controller|Cause|Failure of the accelerometer axis directly causes to incorrect flight control commands.|
+|Gyro → Flight controller|Cause|Failure of gyro directly causes to unstable flight or uncontrolled yaw.|
+|Driver → Data Parsing System|Cause|Driver crash directly causes missing data or incorrect formatting of the parsing module.|
+|Driver → Flight controller|Imply|Driver crash leads to sensor data loss, which leads to flight control decision errors.|
+|Driver → Redundancy and Switching Logic System|Cause|Driver crash directly causes redundancy and switching logic switching delays.|
+|Data Parsing System → Flight controller|Imply|Data parsing module parsing error leads to positioning error, which leads to flight control navigation bias.|
+|Clock Synchronization System → Flight controller|Trigger|Clock Synchronisation Module timestamps are messed up immediately triggering to incorrect trajectory calculation.|
+|Signal Quality Assessment System → Redundancy and Switching Logic System|Conflict|Signal Quality Assessment System and Redundancy and Switching Logic System are in conflict with each other, and the conflict between the two leads to GPS system failure.|
+|Signal Quality Assessment System → Flight controller|Imply|Wrong signal quality assessment leads to wrong positioning, which leads to abnormal flight control path planning.|
+|Redundancy and Switching Logic System → Flight controller|Imply|Confused redundancy and switching logic leads to positioning errors, which leads to abnormal flight control path planning.|
+|Flight controller → Visual and Laser Ranging System|Trigger|Flight controller command error immediately triggers range module operation.|
+|Visual and Laser Ranging System → Flight controller|Imply|Vision/laser ranging error leads to wrong positioning data, which leads to flight controller problems.|
+|Human factors → Driver|Cause|Human factor configuration error directly causes to abnormal driver driver parameters.|
+|Human factors → Data Parsing System|Cause|Human factor improper maintenance directly causes to data parsing module firmware version conflict|
+|Human factors → Redundancy and Switching Logic System|Cause|Human factor setting error directly causes to redundancy not triggered as expected.|
+|Human factors → Flight controller|Cause|Human factor misoperation directly causes uncontrolled manual intervention in flight control mode|
+|Environmental factors → GPS System|Scenario Constraints|When electromagnetic interference in environmental factors, Environmental factors lead to loss of satellite signals of GPS receiver module.|
+|Environmental factors → Signal Quality Assessment System|Scenario Constraints|When the environmental factors in the extreme weather, environmental factors lead to signal quality assessment distortion.|
+|Environmental factors → Redundancy and Switching Logic System|Scenario Constraints|When the environmental factors in extreme weather, environmental factors lead to redundancy system crash.|
+|Environmental factors → Flight controller|Imply|Environmental factor strong wind interference leads to data processing error, which leads to flight controller attitude control overrun.|
