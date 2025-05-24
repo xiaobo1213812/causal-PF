@@ -67,3 +67,24 @@ This repository contains a summary overview of this paper, as well as
 |Environmental factors → Signal Quality Assessment System|Scenario Constraints|When the environmental factors in the extreme weather, environmental factors lead to signal quality assessment distortion.|
 |Environmental factors → Redundancy and Switching Logic System|Scenario Constraints|When the environmental factors in extreme weather, environmental factors lead to redundancy system crash.|
 |Environmental factors → Flight controller|Imply|Environmental factor strong wind interference leads to data processing error, which leads to flight controller attitude control overrun.|
+
+### 🗞The table between causal graph Variables and problem diagram domain in GPS system.
+
+| **causal graph Variables**               | **problem diagram domain**       |
+|-------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------|
+| GPS System|Machine Domain|
+|Data Parsing System |Designed Domain| 
+|Signal Quality Assessment System  |Designed Domain|
+|Shielding Measures | Designed Domain| 
+|Clock Synchronization System|Designed Domain|
+|Redundancy and Switching Logic System|Designed Domain|
+|Driver|Designed Domain|
+|Visual and Laser Ranging System|Designed Domain|
+|Flight controller|Designed Domain|
+|Signal Cable|Given Domain(X)|
+|Antenna|Given Domain(X)|
+|Gyro|Given Domain(X)|
+|Accelerometer|Given Domain(X)|
+|Power|Given Domain(C)|
+|Environmental factors|Given Domain(C)|
+|Human factors|Given Domain(B)|
