@@ -94,7 +94,8 @@ This repository contains a summary overview of this paper, as well as
 
 | **Causality**               | **Shared phenomena**       | **Description**                                                                 |
 |-------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------|
-| Antenna → GPS System | Cause | Antenna damage directly cause GPS cannot resolve data.|
+| Antenna → GPS System | Cause![image](https://github.com/user-attachments/assets/67e3bb0f-768f-4105-aed5-be0079339905)
+ | Antenna damage directly cause GPS cannot resolve data.|
 | Antenna → Signal Quality Assessment System | Cause   | Antenna damage directly cause the evaluation module to misjudge the signal state.                      |
 | Antenna → Data Parsing System  | Cause       | Antenna damage directly causes the resolver module output position to drift or jump. |
 | Signal Cable → GPS System | Cause      |  Poor or broken signal Cable directly causes the GPS module to drop out intermittently.            |
