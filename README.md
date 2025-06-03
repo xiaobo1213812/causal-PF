@@ -31,27 +31,27 @@ This repository contains a summary overview of this paper, as well as
 
 |ID| **Causality**               |
 |-------------------------|-----------------------|
-|1| Antenna → GPS System |
-| 2|Antenna → Signal Quality Assessment System |
-|3|Antenna → Data Parsing System  | 
-|4 |Signal Cable → GPS System |
-| 5|Signal Cable → Signal Quality Assessment System  | 
-| 6|Signal Cable → Data Parsing System | 
-|7|Power → GPS System |
-|8|Power → Clock Synchronization System    |
-|9|Power → Flight controller |
-|10|Power → Accelerometer | 
-|11|Power → Gyro|
-|12|Power → Data Parsing System|
-|13|Power → Redundancy and Switching Logic System |
-|14|Power → Driver|                                      |
+|1| Antenna damage→ GPS System |
+| 2|Antenna damage→ Signal Quality Assessment System |
+|3|Antenna damage→ Data Parsing System  | 
+|4 |Signal Cable damage→ GPS System |
+| 5|Signal Cable damage→ Signal Quality Assessment System  | 
+| 6|Signal Cable damage→ Data Parsing System | 
+|7|Power shortage→ GPS System |
+|8|Power shortage→ Clock Synchronization System    |
+|9|Power shortage→ Flight controller |
+|10|Power shortage→ Accelerometer | 
+|11|Power shortage→ Gyro|
+|12|Power shortage→ Data Parsing System|
+|13|Power shortage→ Redundancy and Switching Logic System |
+|14|Power shortage→ Driver|                                      |
 |15|Shielding Measures → GPS System |
 |16| Shielding Measures → Signal Quality Assessment System |
-|17|Accelerometer → Flight controller|
-|18|Gyro → Flight controller|
-|19|Driver → Data Parsing System|
-|20|Driver → Flight controller|
-|21|Driver → Redundancy and Switching Logic System|
+|17|Accelerometer damage→ Flight controller|
+|18|Gyro damage→ Flight controller|
+|19|Driver failure→ Data Parsing System|
+|20|Driver failure→ Flight controller|
+|21|Driver failure→ Redundancy and Switching Logic System|
 |22|Data Parsing System → Flight controller|
 |23|Clock Synchronization System → Flight controller|
 |24|Signal Quality Assessment System → Redundancy and Switching Logic System|
@@ -94,27 +94,27 @@ This repository contains a summary overview of this paper, as well as
 
 | **Causality**               | **Variation**  |**Shared phenomena**       | **Description**                                                                 |
 |------------------------|------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------|
-| Antenna → GPS System | ![image](https://github.com/user-attachments/assets/4320bcb3-0bfc-4093-a0dc-bff6315a1808) |Cause| Antenna damage directly cause GPS cannot resolve data.|
-| Antenna → Signal Quality Assessment System |![image](https://github.com/user-attachments/assets/df5c3162-2390-48db-b709-b98feda91253) |Cause   | Antenna damage directly cause the evaluation module to misjudge the signal state.                      |
-| Antenna → Data Parsing System  |![image](https://github.com/user-attachments/assets/3cb1fb63-1f75-4fbf-8464-4d0f6488056d) |Cause       | Antenna damage directly causes the resolver module output position to drift or jump. |
-| Signal Cable → GPS System | ![image](https://github.com/user-attachments/assets/e91b6e04-a10d-400e-b2c4-9698fe45bee5)|Cause      |  Poor or broken signal Cable directly causes the GPS module to drop out intermittently.            |
-| Signal Cable → Signal Quality Assessment System  |![image](https://github.com/user-attachments/assets/e68983bc-6e13-4aba-8bd4-e9cc29217d6b) |Cause | Signal Cable noise introduction directly causes the evaluation module to misjudge the evaluation result. |
-| Signal Cable → Data Parsing System | ![image](https://github.com/user-attachments/assets/73b9cd81-a24d-413c-b5c0-d7c1aab931a1)|Cause |  Signal Cable damage directly causes the output position of the resolution module to jump or lose points.                  |
-|Power → GPS System |![image](https://github.com/user-attachments/assets/bc9da0c8-6193-4511-b70f-70e147c58e43)|Trigger |Unstable power supply immediately triggers to GPS chip reboot or failure. |
-|Power → Clock Synchronization System   | ![image](https://github.com/user-attachments/assets/58d3136d-741d-45c4-a332-0b44ed14ce86)|Trigger| Abnormal power supply voltage immediately triggers clock drift leading to synchronisation failure.        |
-|Power → Flight controller |![image](https://github.com/user-attachments/assets/0ae4414a-f82f-442d-a6d5-5230c36ff6d6)|Trigger|Power supply dropout immediately triggers flight control interruption.           |
-|Power → Accelerometer| ![image](https://github.com/user-attachments/assets/0e833225-a7c3-4a16-a9bf-85ebd1914800)| Trigger| Insufficient power supply power supply immediately triggers to acceleration failure. |
-|Power → Gyro|![image](https://github.com/user-attachments/assets/f4b456b2-e2b6-457e-86e1-28ca143033c9) |Trigger| Insufficient power supply power supply immediately triggers to gyroscope drift.                            |
-|Power → Data Parsing System|![image](https://github.com/user-attachments/assets/61857b7c-84b8-4fd4-92c4-d05039dc0393) |Cause| Power supply instability directly causes data resolution error.|
-|Power → Redundancy and Switching Logic System| ![image](https://github.com/user-attachments/assets/0ac91a53-fc89-4520-bf14-b604f3fcaaec)|Cause |Unstable power supply directly causes failure to switch between primary and backup systems.                   |
-|Power → Driver|![image](https://github.com/user-attachments/assets/e50362e5-27f8-4096-8ef5-39b394639fd2) |Trigger| Unstable power supply immediately triggers to driver failure.                                       |
+| Antenna damage→ GPS System | ![image](https://github.com/user-attachments/assets/4320bcb3-0bfc-4093-a0dc-bff6315a1808) |Cause| Antenna damage directly cause GPS cannot resolve data.|
+| Antenna damage→ Signal Quality Assessment System |![image](https://github.com/user-attachments/assets/df5c3162-2390-48db-b709-b98feda91253) |Cause   | Antenna damage directly cause the evaluation module to misjudge the signal state.                      |
+| Antenna damage→ Data Parsing System  |![image](https://github.com/user-attachments/assets/3cb1fb63-1f75-4fbf-8464-4d0f6488056d) |Cause       | Antenna damage directly causes the resolver module output position to drift or jump. |
+| Signal Cable damage→ GPS System | ![image](https://github.com/user-attachments/assets/e91b6e04-a10d-400e-b2c4-9698fe45bee5)|Cause      |  Poor or broken signal Cable directly causes the GPS module to drop out intermittently.            |
+| Signal Cable damage→ Signal Quality Assessment System  |![image](https://github.com/user-attachments/assets/e68983bc-6e13-4aba-8bd4-e9cc29217d6b) |Cause | Signal Cable noise introduction directly causes the evaluation module to misjudge the evaluation result. |
+| Signal Cable damage→ Data Parsing System | ![image](https://github.com/user-attachments/assets/73b9cd81-a24d-413c-b5c0-d7c1aab931a1)|Cause |  Signal Cable damage directly causes the output position of the resolution module to jump or lose points.                  |
+|Power shortage→ GPS System |![image](https://github.com/user-attachments/assets/bc9da0c8-6193-4511-b70f-70e147c58e43)|Trigger |Unstable power supply immediately triggers to GPS chip reboot or failure. |
+|Power shortage→ Clock Synchronization System   | ![image](https://github.com/user-attachments/assets/58d3136d-741d-45c4-a332-0b44ed14ce86)|Trigger| Abnormal power supply voltage immediately triggers clock drift leading to synchronisation failure.        |
+|Power shortage→ Flight controller |![image](https://github.com/user-attachments/assets/0ae4414a-f82f-442d-a6d5-5230c36ff6d6)|Trigger|Power supply dropout immediately triggers flight control interruption.           |
+|Power shortage→ Accelerometer| ![image](https://github.com/user-attachments/assets/0e833225-a7c3-4a16-a9bf-85ebd1914800)| Trigger| Insufficient power supply power supply immediately triggers to acceleration failure. |
+|Power shortage→ Gyro|![image](https://github.com/user-attachments/assets/f4b456b2-e2b6-457e-86e1-28ca143033c9) |Trigger| Insufficient power supply power supply immediately triggers to gyroscope drift.                            |
+|Power shortage→ Data Parsing System|![image](https://github.com/user-attachments/assets/61857b7c-84b8-4fd4-92c4-d05039dc0393) |Cause| Power supply instability directly causes data resolution error.|
+|Power shortage→ Redundancy and Switching Logic System| ![image](https://github.com/user-attachments/assets/0ac91a53-fc89-4520-bf14-b604f3fcaaec)|Cause |Unstable power supply directly causes failure to switch between primary and backup systems.                   |
+|Power shortage→ Driver|![image](https://github.com/user-attachments/assets/e50362e5-27f8-4096-8ef5-39b394639fd2) |Trigger| Unstable power supply immediately triggers to driver failure.                                       |
 |Shielding Measures → GPS System|![image](https://github.com/user-attachments/assets/5967a414-3b6a-4152-aeb9-e87137fb1004) |Scenario Constraints|When shielding is poor, it leads to the system to misjudge signal blindness; When shielding is excessive, it leads to failure to receive signals.     |
 | Shielding Measures → Signal Quality Assessment System|![image](https://github.com/user-attachments/assets/fa03f2a6-30f2-4dc0-ad9b-2bfe73670dd9)|Scenario Constraints|When poorly masked, it leads to parsing the wrong coordinates; When over-masked, it leads to receiving the coordinates.        |
-|Accelerometer → Flight controller|![image](https://github.com/user-attachments/assets/4995c857-cd9e-464c-8a85-d2699907bfc9) |Cause|Failure of the accelerometer axis directly causes to incorrect flight control commands.|
-|Gyro → Flight controller|![image](https://github.com/user-attachments/assets/9f30c1f3-725d-4391-bf49-cb4ec12e6609) |Cause|Failure of gyro directly causes to unstable flight or uncontrolled yaw.|
-|Driver → Data Parsing System|![image](https://github.com/user-attachments/assets/9d2c0828-f099-480a-8b91-fa604c7dc954)|Cause|Driver crash directly causes missing data or incorrect formatting of the parsing module.|
-|Driver → Flight controller|![image](https://github.com/user-attachments/assets/bb49da1a-9717-4209-bb9a-23d8873f3c2d) |Imply|Driver crash leads to sensor data loss, which leads to flight control decision errors.|
-|Driver → Redundancy and Switching Logic System|![image](https://github.com/user-attachments/assets/42a0c8df-891b-46ce-802d-ea809c02d4fa)|Cause|Driver crash directly causes redundancy and switching logic switching delays.|
+|Accelerometer damage→ Flight controller|![image](https://github.com/user-attachments/assets/4995c857-cd9e-464c-8a85-d2699907bfc9) |Cause|Failure of the accelerometer axis directly causes to incorrect flight control commands.|
+|Gyro damage→ Flight controller|![image](https://github.com/user-attachments/assets/9f30c1f3-725d-4391-bf49-cb4ec12e6609) |Cause|Failure of gyro directly causes to unstable flight or uncontrolled yaw.|
+|Driver failure→ Data Parsing System|![image](https://github.com/user-attachments/assets/9d2c0828-f099-480a-8b91-fa604c7dc954)|Cause|Driver crash directly causes missing data or incorrect formatting of the parsing module.|
+|Driver failure→ Flight controller|![image](https://github.com/user-attachments/assets/bb49da1a-9717-4209-bb9a-23d8873f3c2d) |Imply|Driver crash leads to sensor data loss, which leads to flight control decision errors.|
+|Driver failure→ Redundancy and Switching Logic System|![image](https://github.com/user-attachments/assets/42a0c8df-891b-46ce-802d-ea809c02d4fa)|Cause|Driver crash directly causes redundancy and switching logic switching delays.|
 |Data Parsing System → Flight controller|![image](https://github.com/user-attachments/assets/32b750b6-a972-40a9-9d81-4388b893ed69)|Imply|Data parsing module parsing error leads to positioning error, which leads to flight control navigation bias.|
 |Clock Synchronization System → Flight controller|![image](https://github.com/user-attachments/assets/0baf8b53-828d-47ac-8355-b433b1b58131) |Trigger|Clock Synchronisation Module timestamps are messed up immediately triggering to incorrect trajectory calculation.|
 |Signal Quality Assessment System → Redundancy and Switching Logic System|![image](https://github.com/user-attachments/assets/b23060d9-da46-4a2c-b6f6-57f54c3a6b2f) |Conflict|Signal Quality Assessment System and Redundancy and Switching Logic System are in conflict with each other, and the conflict between the two leads to GPS system failure.|
