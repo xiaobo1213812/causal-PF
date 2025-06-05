@@ -10,6 +10,8 @@ This repository contains a summary overview of this paper, as well as
 
 4.The ‘json’ code for the problem diagram.
 
+5.The detailed data of the two groups of problem diagrams.
+
 ## 📄Overview
 🔍Objective: The purpose of this study is to integrate causal graph into the Problem Frames (PF) to enhance the semantic expressiveness and interpretability of PF,  and utilize Large Language Models (LLMs) to assist engineers in efficiently and accurately extracting causal relationships.
 
@@ -134,3 +136,8 @@ This repository contains a summary overview of this paper, as well as
 
 ### 🗞 The ‘json’ code for the problem diagram.
 The ‘json’ code for the problem diagram is the file of "problem diagram. json".
+
+
+
+### 🗞 The detailed data of the two groups of problem diagrams.
+The data of problem diagrams is the file of "problem diagram. json".
